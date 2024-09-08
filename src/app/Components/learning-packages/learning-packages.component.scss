@@ -1,0 +1,85 @@
+@use '../../global/themes.scss' as v;
+
+.learning-packages-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 70px auto 0 auto;
+
+    .learn-more-section {
+        h1 {
+            font-size: 40px;
+            color: v.$colors-text-primary;
+        }
+
+        p {
+            color: v.$colors-text-secondary;
+        }
+
+        button {
+            width: 110px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            color: v.$colors-link-primary;
+
+            img {
+                margin-left: 10px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                img {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .facts-section {
+        display: flex;
+
+        .item {
+            box-shadow: 0 0px 6px -3px v.$colors-text-tertiary;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+            >* {
+                margin: 0 auto;
+            }
+
+            div {
+                width: 70px;
+                height: 70px;
+                background-color: v.$colors-link-primary;
+                border-radius: 10px;
+                position: relative;
+                margin-bottom: 30px;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            p {
+                text-align: center;
+                color: v.$colors-text-secondary;
+            }
+        }
+    }
+}

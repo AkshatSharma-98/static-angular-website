@@ -1,0 +1,55 @@
+@use '../../global/themes.scss' as v;
+
+.carousel-container {
+    width: 80%;
+    margin: 80px auto 0 auto;
+
+    p:first-child {
+        color: v.$colors-link-primary;
+        font-weight: bold;
+    }
+
+    p:nth-child(3) {
+        color: v.$colors-text-secondary;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: v.$colors-text-primary;
+    }
+
+    .people-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .person-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0px 6px -3px v.$colors-text-tertiary;
+            border-radius: 15px;
+            padding-bottom: 10px;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &>img {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                a {
+                    margin: 5px;
+                    width: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

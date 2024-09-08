@@ -1,0 +1,65 @@
+@use '../../global/themes.scss' as v;
+
+.newsletter-container {
+    margin-top: 100px;
+    background-color: v.$colors-bg-primary;
+    padding: 40px;
+
+    >* {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .details {
+        text-align: center;
+        margin-bottom: 80px;
+
+        p:first-child {
+            color: v.$colors-link-primary;
+            font-weight: bold;
+        }
+
+        p:nth-child(3) {
+            color: v.$colors-text-secondary;
+        }
+    }
+
+    form {
+        display: flex;
+
+        * {
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        input {
+            border: 1px solid #a7a3a3;
+            background-color: v.$colors-bg-secondary;
+            outline: none;
+            width: 70%;
+
+            &::placeholder {
+                font-weight: bold;
+            }
+        }
+        button {
+            width: 20%;
+            border: none;
+            background-color: v.$colors-link-primary;
+            color: v.$colors-white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: v.$colors-link-hover;
+            }
+        }
+    }
+
+    .error {
+        color: v.$colors-error;
+        width: 200px;
+        margin: 20px auto;
+    }
+}
